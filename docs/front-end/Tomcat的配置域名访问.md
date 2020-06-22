@@ -14,7 +14,7 @@ tags:
   然后进入conf目录下,打开server.xml进行编辑.
   配置域名能直接访问项目,需要在server.xml添加以下代码：
   ```
-  <Host name="www.nianqing.com"  appBase="webapps"
+  <Host name="www.qinianqing.com"  appBase="webapps"
       unpackWARs="true" autoDeploy="true">
       <Context docBase="C:\Program Files\apache-tomcat-9.0.7-windows-x64\apache-tomcat-9.0.7\webapps\Xydesign" path="" reloadable="true"/>
   <!-- SingleSignOn valve, share authentication between web applications
@@ -36,11 +36,11 @@ tags:
 
 
   ```
-  <Host name="www.nianqing.com"  appBase="hcode"
+  <Host name="www.qinianqing.com"  appBase="hcode"
             unpackWARs="true" autoDeploy="true">
   ```
   将Host标签的name设置为你的域名,appBase设置为你的项目的路径(可以为绝对路径和相对路径,你可以看见我这里设置为相对路径).
-  配置完成即可保存,然后通过 http://www.nianqing.com/Xydesign 访问.
+  配置完成即可保存,然后通过 http://www.qinianqing.com/Xydesign 访问.
 
   2. 配置项目名缺省进行访问     
 
@@ -49,7 +49,7 @@ tags:
   ```
   <Context docBase="hcode" path="" />
   ```
-  其中,docBase即为项目的绝对路径,此时通过 http://www.nianqing.com 即可进行项目名缺省的访问.
+  其中,docBase即为项目的绝对路径,此时通过 http://www.qinianqing.com 即可进行项目名缺省的访问.
 
   3. 部署多个项目到Tomcat     
 
@@ -59,7 +59,7 @@ tags:
   <Context path="" docBase="" debug="0" reloadable="false"/>
   ```
   将path标签设置为`/你的项目名`,docBase设置为`你的项目根目录的绝对路径`.
-  配置完成即可保存,然后通过 http://www.nianqing.com/项目名 访问.
+  配置完成即可保存,然后通过 http://www.qinianqing.com/项目名 访问.
 
 
   4. https访问配置    

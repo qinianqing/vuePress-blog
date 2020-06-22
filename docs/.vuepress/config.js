@@ -28,8 +28,8 @@ module.exports = {
     logo: "/logo.png",
     smoothScroll: true, //平滑滚动
     sidebarDepth: 1,
-    repo: "qinianqing/nianqing.github.io",
-    docsRepo: "qinianqing/nianqing.github.io",
+    repo: "qinianqing/qinianqing.github.io",
+    docsRepo: "qinianqing/qinianqing.github.io",
     docsBranch: "master",
     editLinks: true, // 编辑链接
     editLinkText: "帮助我改善这个页面", // 链接字段
@@ -37,7 +37,7 @@ module.exports = {
     backToTop: true,
     algolia: {
       apiKey: '67902b2cb45b11eaae8f7cd30ae46fe8',
-      indexName: 'nianqing'
+      indexName: 'qinianqing'
     },
     sidebar: {
       "/front-end/": front_end.all,

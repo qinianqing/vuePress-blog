@@ -34,7 +34,7 @@ tags:
   └─ vue.config.js
 ```
 
-dist 是我们的前端项目。server 是我们的后端项目。
+dist 是我们的前端项目。 server 是我们的后端项目。
 下面再来看看我们的`docker-compose.yml`:
 
 ```docker
@@ -84,7 +84,7 @@ dist 是我们的前端项目。server 是我们的后端项目。
       gzip_vary on;
       server {
           listen  80;
-          server_name  www.nianqing.com;
+          server_name  www.qinianqing.com;
           #音乐app项目
           location / {
           index index.html index.htm;   #添加属性。

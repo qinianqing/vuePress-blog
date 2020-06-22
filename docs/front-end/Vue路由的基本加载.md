@@ -40,7 +40,7 @@ tags:
   import Vue from 'vue'
   import VueRouter from "vue-router"
   import HelloWorld from '../components/HelloWorld'
-  import Xie from '../components/nianqing'
+  import Xie from '../components/qinianqing'
 
   Vue.use(VueRouter)
 
@@ -51,7 +51,7 @@ tags:
         component:HelloWorld
       },
       {
-        path:"/nianqing",
+        path:"/qinianqing",
         component:Xie
       }
     ]
@@ -74,7 +74,7 @@ tags:
         <router-link :to="urlData.HelloWorld">HelloWorld</router-link>
       </li>
       <li>
-        <router-link :to="urlData.nianqing">nianqing</router-link>
+        <router-link :to="urlData.qinianqing">qinianqing</router-link>
       </li>
   </ul>
   ```

@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2020-06-22 14:32:42
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2020-06-22 18:59:45
+--> 
 ---
 title: git基本知识
 tags:
@@ -52,8 +60,8 @@ Git 是分布式的.这是 Git 和其它非分布式的版本控制系统,例如
 
  当安装完 Git 应该做的第一件事就是设置你的用户名称与邮件地址. 这样做很重要,因为每一个 Git 的提交都会使用这些信息,并且它会写入到你的每一次提交中,不可更改：
  ```
- $ git config --global user.name "nianqing"
- $ git config --global user.email nianqing@example.com
+ $ git config --global user.name "qinianqing"
+ $ git config --global user.email qinianqing@example.com
  ```
  在你每一次提交你代码更新信息时,会携带你的用户信息
 

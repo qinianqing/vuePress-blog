@@ -69,7 +69,7 @@ tags:
         # 设置简历项目
         server {
             listen  80;
-            server_name www.nianqing.com;
+            server_name www.qinianqing.com;
             location / {
                 root /usr/share/nginx/html;   #站点目录
                 index index.html index.htm;   #添加属性。 

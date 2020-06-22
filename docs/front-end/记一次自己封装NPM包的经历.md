@@ -10,7 +10,7 @@ tags:
 
 ### 说在前面
 
-最近一直在忙自己的毕业设计,在做的过程中,有的地方要用到缓存.我采用了 localStorage 和 sessionStorage 的方式进行的缓存,并完整地实现了自己想要的功能.但是我突然想到前端的" 模块化开发",这块完全可以独立出来,将其封装为一个统一的 API,想要使用的时候就引入使用,于是我将其封装为了一个将 localStorage 和 sessionStorage 统一在一起的功能函数:`nianqing-storage.js`.我存放在自己的电脑里面,以便我自己以后使用,但是我突然想到了程序员的"开源精神"😹,好吧其实是想到,每次我们需要安装一个包的时候,我们都是采用`npm install xxx`的方式进行引入,然后在使用的时候,就通过`import xxx from xxx` 这样的方式进行使用.于是我也想要将我的功能函数封装为一个 npm 包,并且发布到[npm](https://www.npmjs.com/)👆 上面去,那也算是为我们开源作出了一定的贡献.<!-- more -->
+最近一直在忙自己的毕业设计,在做的过程中,有的地方要用到缓存.我采用了 localStorage 和 sessionStorage 的方式进行的缓存,并完整地实现了自己想要的功能.但是我突然想到前端的" 模块化开发",这块完全可以独立出来,将其封装为一个统一的 API,想要使用的时候就引入使用,于是我将其封装为了一个将 localStorage 和 sessionStorage 统一在一起的功能函数:`qinianqing-storage.js`.我存放在自己的电脑里面,以便我自己以后使用,但是我突然想到了程序员的"开源精神"😹,好吧其实是想到,每次我们需要安装一个包的时候,我们都是采用`npm install xxx`的方式进行引入,然后在使用的时候,就通过`import xxx from xxx` 这样的方式进行使用.于是我也想要将我的功能函数封装为一个 npm 包,并且发布到[npm](https://www.npmjs.com/)👆 上面去,那也算是为我们开源作出了一定的贡献.<!-- more -->
 
 ### 说得简单,动手困难
 
@@ -42,7 +42,7 @@ npm init -y
 ```
 
 原来初始化包都会有一个 package.json,这个文件包含了这个包  的入口及其信息
-在 src 目录下面存放功能代码`index.js`,dist 目录下面则存放打包后的文件`nianqing-storage.js`
+在 src 目录下面存放功能代码`index.js`,dist 目录下面则存放打包后的文件`qinianqing-storage.js`
 一切都已经准备就绪,我开始寻找一个打包工具.
 
 ### webpack
@@ -60,24 +60,24 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "nianqing-storage.js",
+    filename: "qinianqing-storage.js",
     publicPath: "/dist/",
     path: path.resolve(__dirname, "dist")
   }
 };
 ```
 
-于是打包之后,生成了`nianqing-storage.js`的文件,于是我将此文件复制到我的项目目录里面进行引入使用:
+于是打包之后,生成了`qinianqing-storage.js`的文件,于是我将此文件复制到我的项目目录里面进行引入使用:
 
 ```js
-import storage from "common/js/nianqing-storage";
+import storage from "common/js/qinianqing-storage";
 ```
 
 结果是我成功地引入了文件并进行了使用.但是我这是 ES6 规范,并不能支持 commonJS 模式,说到这个,有如下标准:
 
 - amd – 异步模块定义,用于像 RequireJS 这样的模块加载器
-- cjs – CommonJS,适用于 Node 和 Browserify/Webpack 例如`require('nianqing-storage')`
-- es – 将软件包保存为 ES 模块文件 例如 `import storage from 'nianqing-storage'`.
+- cjs – CommonJS,适用于 Node 和 Browserify/Webpack 例如`require('qinianqing-storage')`
+- es – 将软件包保存为 ES 模块文件 例如 `import storage from 'qinianqing-storage'`.
 - iife – 一个自动执行的功能,适合作为`<script>`标签.（如果要为应用程序创建一个捆绑包,您可能想要使用它,因为它会使文件大小变小.）
 - umd – 通用模块定义,以 amd,cjs 和 iife 为一体,umd 是 amd 和 CommonJS 的糅合,umd 先判断是否支持 Node.js 的模块（exports）是否存在,存在则使用 Node.js 模块模式.
 
@@ -92,7 +92,7 @@ const path = require('path');
 module.exports = {
 entry: './src/index.js',
 output: {
-    filename: 'nianqing-storage.js',
+    filename: 'qinianqing-storage.js',
     publicPath: '/dist/',
     libraryTarget: 'umd'
     path: path.resolve(__dirname, 'dist')
@@ -124,9 +124,9 @@ npm install --global rollup
 export default {
   input: "./src/index.js",
   output: {
-    file: "./dist/nianqing-storage.js",
+    file: "./dist/qinianqing-storage.js",
     format: "umd",
-    name: "nianqing-storage"
+    name: "qinianqing-storage"
   }
 };
 ```
@@ -145,9 +145,9 @@ import { uglify } from "rollup-plugin-uglify";
 export default {
   input: "./src/index.js",
   output: {
-    file: "./dist/nianqing-storage.js",
+    file: "./dist/qinianqing-storage.js",
     format: "umd",
-    name: "nianqing-storage"
+    name: "qinianqing-storage"
   },
   plugins: [uglify()]
 };
@@ -170,9 +170,9 @@ import { terser } from "rollup-plugin-terser";
 export default {
   input: "./src/index.js",
   output: {
-    file: "./dist/xieyenianqingzi-storage.js",
+    file: "./dist/qinianqing-storage.js",
     format: "umd",
-    name: "nianqing-storage"
+    name: "qinianqing-storage"
   },
   plugins: [terser()]
 };
@@ -209,9 +209,9 @@ import babel from "rollup-plugin-babel";
 export default {
   input: "./src/index.js",
   output: {
-    file: "./dist/nianqing-storage.js",
+    file: "./dist/qinianqing-storage.js",
     format: "umd",
-    name: "nianqing-storage"
+    name: "qinianqing-storage"
   },
   plugins: [
     babel({
@@ -245,19 +245,19 @@ export default {
 
 ```json
 {
-  "name": "nianqing-storage",
+  "name": "qinianqing-storage",
   "version": "1.0.4",
   "description": "a package that encapsulates localStorage and sessionStorage",
-  "main": "dist/nianqing-storage.js",
-  "module": "dist/nianqing-storage.esm.js",
+  "main": "dist/qinianqing-storage.js",
+  "module": "dist/qinianqing-storage.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["web", "localStorage", "sessionStorage"],
-  "author": "nianqing",
+  "author": "qinianqing",
   "license": "ISC",
   "git": {
-    "url": "https://github.com/nianqing/webStorage"
+    "url": "https://github.com/qinianqing/webStorage"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
@@ -282,8 +282,8 @@ export default {
 .
 ├── ./README.md
 ├── ./dist
-│   ├── ./dist/nianqing-storage.esm.js
-│   └── ./dist/nianqing-storage.js
+│   ├── ./dist/qinianqing-storage.esm.js
+│   └── ./dist/qinianqing-storage.js
 ├── ./package-lock.json
 ├── ./package.json
 ├── ./rollup.config.js
@@ -300,10 +300,10 @@ export default {
 
 ```
 $ npm login
-Username: nianqing
+Username: qinianqing
 Password:
 Email: (this IS public) 1435398529@qq.com
-Logged in as nianqing on https://registry.npmjs.org/.
+Logged in as qinianqing on https://registry.npmjs.org/.
 ```
 
 注:输入密码的时候不会显示,只要最后显示 Logged in as your nickName 即可.
@@ -323,7 +323,7 @@ npm publish
 npm install xieyzi-storage
 ```
 
-在 node_moudules 里面查找 `nianqing-storage` :
+在 node_moudules 里面查找 `qinianqing-storage` :
 ![QQ20190328-155537@2x.png](https://i.loli.net/2019/03/28/5c9c7e592c74c.png)
 成功找到,引入项目,成功地进行了引入 ✌️
 

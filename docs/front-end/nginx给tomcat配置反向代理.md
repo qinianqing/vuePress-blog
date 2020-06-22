@@ -19,7 +19,7 @@ tags:
    }
    server {
        listen 80;
-       server_name www.nianqing.com;
+       server_name www.qinianqing.com;
        location / {
            proxy_set_header        Host $host;
            proxy_set_header        X-Real-IP $remote_addr;
@@ -34,7 +34,7 @@ tags:
    nginx -s reload
  ```
  注意这里有几个要注意的点,server_name配置的域名必须与tomcat的serve.xml里面的Host的name字段要一致.
- 完成了重启之后,就可以访问`www.nianqing.com\项目名 ` ,访问到tomcat服务器下面到项目.
+ 完成了重启之后,就可以访问`www.qinianqing.com\项目名 ` ,访问到tomcat服务器下面到项目.
  那么实现分布式反向代理的原理是什么呢,请看下面这个图:
 
 ![寻找终点 (1).png](https://i.loli.net/2018/11/06/5be1b215b14da.png)

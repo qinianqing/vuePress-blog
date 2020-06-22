@@ -15,9 +15,12 @@ cd docs/.vuepress/dist
 git init
 git add -A
 git commit -m 'deploy'
+git remote add origin https://github.com/qinianqing/qinianqing.github.io.git
+git push -u origin master
+
 
 # 如果发布到 https://<USERNAME>.github.io
-git push -f github.com/qinianqing/qinianqing.github.io.git master
+# git push -f https://github.com/qinianqing/qinianqing.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/qinianqing/qinianqing.github.io.git master:gh-pages

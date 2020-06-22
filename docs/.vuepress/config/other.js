@@ -15,8 +15,7 @@ const git = [
   ],
 ];
 const life = [
-  ["/other/life/", "2019一路走来"],
-  ["/other/life/我的2018年总结", "我的2018年总结"],
+  ["/other/life/", "我的2019年总结"],
 ];
 
 module.exports = {

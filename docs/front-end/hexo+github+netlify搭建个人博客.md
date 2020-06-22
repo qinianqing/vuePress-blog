@@ -130,13 +130,13 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 复制你刚刚新建的repository的地址,像这样: 
 
 ```
-  https://github.com/nianqing/your-Repository.git
+  https://github.com/qinianqing/your-Repository.git
 ```
 
   回到项目根目录,将你的本地项目和新建的repository联系起来:
 
 ```
-  git remote add origin https://github.com/nianqing/your-Repository.git
+  git remote add origin https://github.com/qinianqing/your-Repository.git
 ```
 
   在当前根目录下新建.gitignore文件
@@ -175,7 +175,7 @@ themes/
 ```
 deploy:
   type: git #部署方式
-  repository: git@github.com:nianqing/your-Repository.git #关联github仓库
+  repository: git@github.com:qinianqing/your-Repository.git #关联github仓库
   branch: run-page #部署分支
 ```
 
