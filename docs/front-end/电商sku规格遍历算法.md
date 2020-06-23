@@ -1,0 +1,74 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2020-06-23 11:30:08
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2020-06-23 11:34:24
+--> 
+---
+title: 电商sku规格遍历算法
+tags:
+  - JS
+---
+
+### 电商sku规格
+
+需求描述起来很简单，有这样三个数组：
+```
+let names = ["iPhone X", "iPhone XS"]
+
+let colors = ["黑色", "白色"]
+
+let storages = ["64g", "256g"]
+
+```
+需要把他们的所有组合穷举出来，最终得到这样一个数组：
+```
+[
+  ["iPhone X", "黑色", "64g"],
+  ["iPhone X", "黑色", "256g"],
+  ["iPhone X", "白色", "64g"],
+  ["iPhone X", "白色", "256g"],
+  ["iPhone XS", "黑色", "64g"],
+  ["iPhone XS", "黑色", "256g"],
+  ["iPhone XS", "白色", "64g"],
+  ["iPhone XS", "白色", "256g"],
+]
+```
+
+### 编码实现
+```
+let names = ["iPhone X", "iPhone XS"]
+
+let colors = ["黑色", "白色"]
+
+let storages = ["64g", "256g"]
+
+let combine = function (...chunks) {
+  let res = []
+
+  let helper = function (chunkIndex, prev) {
+    let chunk = chunks[chunkIndex]
+    let isLast = chunkIndex === chunks.length - 1
+    for (let val of chunk) {
+      let cur = prev.concat(val)
+      if (isLast) {
+        // 如果已经处理到数组的最后一项了 则把拼接的结果放入返回值中
+        res.push(cur)
+      } else {
+        helper(chunkIndex + 1, cur)
+      }
+    }
+  }
+
+  // 从属性数组下标为 0 开始处理
+  // 并且此时的 prev 是个空数组
+  helper(0, [])
+
+  return res
+}
+
+console.log(combine(names, colors, storages))
+
+```

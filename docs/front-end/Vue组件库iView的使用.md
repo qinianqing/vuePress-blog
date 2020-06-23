@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2020-06-22 14:32:42
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2020-06-23 09:55:32
+--> 
 ---
 title: Vue组件库iView的使用
 tags:
@@ -57,6 +65,3 @@ tags:
    ```
    然后其组件的使用自己去看官方文档
 
-### 说在最后
-
-  现在是北京时间9月28日凌晨00:20,在乏累中写完这篇文章,和大家分享学习.祝大家晚安,明天又将是精彩的一天!

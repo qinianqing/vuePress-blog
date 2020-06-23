@@ -1,5 +1,6 @@
 const all = [
   ["/front-end/", "前端"],
+  ["/front-end/电商sku规格遍历算法", "电商sku规格遍历算法"],
   ["/front-end/react入门必知必会知识点", "react 入门必知必会知识点(万字总结)"],
   ["/front-end/javascript原型与原型链的深度解析", "javascript原型与原型链的深度解析"],
   ["/front-end/React基础知识", "React基础知识"],

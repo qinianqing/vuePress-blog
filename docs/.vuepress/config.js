@@ -36,7 +36,7 @@ module.exports = {
     lastUpdated: "最后更新时间", // 最后更新时间
     backToTop: true,
     algolia: {
-      apiKey: '67902b2cb45b11eaae8f7cd30ae46fe8',
+      apiKey: '0cb60c64e94c10698cb9cd832110e5a1',
       indexName: 'qinianqing'
     },
     sidebar: {
