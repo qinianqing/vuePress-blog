@@ -1,6 +1,7 @@
 const front_end = require("./config/front-end");
 const flutter = require("./config/flutter");
 const other = require("./config/other");
+const server_end = require("./config/server-end");
 module.exports = {
   title: "UKYO TACHIBANA", //左上角的博客标题以及网站显示的标题
   description: "Hi,我是UKYO TACHIBANA",
@@ -46,6 +47,7 @@ module.exports = {
       "/other/git/": other.git,
       "/other/docker/": other.docker,
       "/other/life/": other.life,
+      "/server-end/": server_end.all,
     },
     nav: [
       //导航栏
@@ -54,6 +56,10 @@ module.exports = {
       {
         text: "🍃前端",
         link: "/front-end/",
+      },
+      {
+        text: "👷后端",
+        link: "/server-end/",
       },
       {
         text: "🌿Flutter",
