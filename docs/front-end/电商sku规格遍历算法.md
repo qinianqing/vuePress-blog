@@ -1,11 +1,3 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: sueRimn
- * @Date: 2020-06-23 11:30:08
- * @LastEditors: sueRimn
- * @LastEditTime: 2020-06-23 11:34:24
---> 
 ---
 title: 电商sku规格遍历算法
 tags:
