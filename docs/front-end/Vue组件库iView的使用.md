@@ -1,11 +1,3 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: sueRimn
- * @Date: 2020-06-22 14:32:42
- * @LastEditors: sueRimn
- * @LastEditTime: 2020-06-23 09:55:32
---> 
 ---
 title: Vue组件库iView的使用
 tags:
