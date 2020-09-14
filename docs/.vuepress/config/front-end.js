@@ -35,6 +35,7 @@ const all = [
   ["/front-end/Es6的学习笔记1", "Es6的学习笔记1"],
   ["/front-end/Es6的学习笔记2", "Es6的学习笔记2"],
   ["/front-end/Gulp的基本使用", "Gulp的基本使用"],
+  ["/front-end/类电商数据处理", "类电商数据处理"],
 ];
 
 module.exports = {
